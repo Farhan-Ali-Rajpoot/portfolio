@@ -23,7 +23,7 @@ export function MagneticEffect(e) {
         gsap.to(currentTarget, {
             x: distanceX,
             y: distanceY,
-            duration: 0.5,
+            duration: 0.7,
             ease: "power3.out",
             overwrite: "auto"
         });
@@ -36,7 +36,7 @@ export function MagneticEffect(e) {
             gsap.to(innerContent, {
                 x: innerDistanceX,
                 y: innerDistanceY,
-                duration: 0.5,
+                duration: 0.7,
                 ease: "power3.out",
                 overwrite: "auto"
             });
@@ -67,7 +67,7 @@ function resetElement(el) {
         gsap.to(innerContent, {
             x: 0,
             y: 0,
-            duration: 1,
+            duration: 1.2,
             ease: "elastic.out",
             overwrite: "auto"
         });
