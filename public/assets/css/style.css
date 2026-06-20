@@ -6,6 +6,10 @@
 /* Components */
 @import url('./components/navbar.css');
 
+/* Global Animations */
+@import url('./animation/roll-text.css');
+
+
 * {
   box-sizing: border-box;
   margin: 0;

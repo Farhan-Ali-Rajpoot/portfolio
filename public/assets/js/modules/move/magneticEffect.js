@@ -17,8 +17,8 @@ export function MagneticEffect(e) {
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
 
-        const distanceX = (e.clientX - centerX) * 0.3;
-        const distanceY = (e.clientY - centerY) * 0.3;
+        const distanceX = (e.clientX - centerX) * 0.4;
+        const distanceY = (e.clientY - centerY) * 0.4;
 
         gsap.to(currentTarget, {
             x: distanceX,
@@ -30,8 +30,8 @@ export function MagneticEffect(e) {
 
         const innerContent = currentTarget.querySelector("[data-magnetic-inner]");
         if (innerContent) {
-            const innerDistanceX = (e.clientX - centerX) * 0.2;
-            const innerDistanceY = (e.clientY - centerY) * 0.2;
+            const innerDistanceX = (e.clientX - centerX) * 0.25;
+            const innerDistanceY = (e.clientY - centerY) * 0.25;
 
             gsap.to(innerContent, {
                 x: innerDistanceX,

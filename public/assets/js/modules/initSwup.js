@@ -30,7 +30,8 @@ export function initSwup() {
         y: '-100%', 
         duration: 0.7, 
         ease: "power2.inOut", 
-        stagger: 0.05 
+        stagger: 0.05,
+        delay: .1
     }, 0);
     
     if (initView) {

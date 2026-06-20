@@ -2,19 +2,19 @@
 
 
 
-const menu = document.getElementById('menu');
+const hamIcon = document.querySelector('.hamburger-icon');
 const menuSwitch = document.getElementById('menu-switch');
 
-export function MenuFeature(ScrollY) {
+export function MenuFeature(scrollY) {
 
-    if (!menu || !menuSwitch) return;
+    if (!hamIcon || !menuSwitch) return;
 
     const scrollThreshold = 80;
 
     if (scrollY > scrollThreshold) {
-        menu.classList.add('is-visible');
+        hamIcon.classList.add('is-visible');
     } else {
-        menu.classList.remove('is-visible');
+        hamIcon.classList.remove('is-visible');
 
         if (menuSwitch.checked) {
             menuSwitch.checked = false;
