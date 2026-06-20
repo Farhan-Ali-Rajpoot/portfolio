@@ -10,3 +10,4 @@ window.addEventListener("DOMContentLoaded", () => {
     initGlobalScrollDispatcher()
     initGlobalMouseMoveRouter()
 })
+
