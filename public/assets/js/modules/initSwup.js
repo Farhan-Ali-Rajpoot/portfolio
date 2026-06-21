@@ -1,5 +1,6 @@
 import './vendor/swup.js';
 import { gsap } from './vendor/gsap-core.js';
+import { select, selectAll } from '../utils/select.js';
 
 export function initSwup() {
     const swup = new Swup({ 
@@ -7,12 +8,12 @@ export function initSwup() {
     });
 
     // Page transition container
-    const ptcontainer = document.querySelector('.pt-container');
-    const columns = document.querySelectorAll('.pt-column');
+    const ptcontainer = select('.pt-container');
+    const columns = selectAll('.pt-column');
     
     if (columns.length === 0) return;
 
-    const initView = document.querySelector('#swup'); 
+    const initView = select('#swup'); 
 
     gsap.set(ptcontainer, { pointerEvents: 'auto' });
     gsap.set(columns, { y: '0%' });
@@ -44,7 +45,7 @@ export function initSwup() {
 
     swup.hooks.replace('animation:out:await', async () => {
         const tl = gsap.timeline();
-        const liveView = document.querySelector('#swup');
+        const liveView = select('#swup');
 
         gsap.set(ptcontainer, { pointerEvents: 'auto' });
         gsap.set(columns, { y: '100%' }); // Start stairs at bottom
@@ -71,7 +72,7 @@ export function initSwup() {
 
     swup.hooks.replace('animation:in:await', async () => {
         const tl = gsap.timeline();
-        const liveView = document.querySelector('#swup');
+        const liveView = select('#swup');
         
         // Instantly stage the incoming new page container at the bottom
         if (liveView) gsap.set(liveView, { y: '10vh' });
